@@ -1,3 +1,3 @@
 ﻿$(document).ready(function () {
-    $("#upper").html("This is a test");
+    $("#upper").html("Screen Height " + screen.height + " Screen Width " + screen.width + ". Hello " + name );
 });
