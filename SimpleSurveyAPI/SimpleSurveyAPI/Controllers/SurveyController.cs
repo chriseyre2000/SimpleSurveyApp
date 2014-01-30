@@ -9,19 +9,24 @@ namespace SimpleSurveyAPI.Controllers
 {
     public class SurveyController : ApiController
     {
-        public string Get(int id)
+        public HttpResponseMessage Get(int id)
         {
+            HttpResponseMessage response = new HttpResponseMessage(HttpStatusCode.OK);
+
             if (id == 1)
             {
-                return "<span>First</span>";
+                response.Content = new StringContent("First");
             }
-
-            if (id == 42)
+            else if (id == 42)
             {
-                return "<span>Hitchickers</span>";
+                response.Content = new StringContent("<span>Hitchickers</span>");
+            }
+            else
+            {
+                response.Content = new StringContent("<span>Unknown</span>");            
             }
 
-            return "<span>Unknown</span>";
+            return response;
         }
     }
 }

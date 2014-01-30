@@ -1,3 +1,5 @@
 This is a simple javascript demo.
 
-It works locally in firefox.
+This demonstrates calling a .net web api from javascript.
+
+It works locally in both internet explorer.
